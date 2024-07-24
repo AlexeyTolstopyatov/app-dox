@@ -1,0 +1,45 @@
+﻿<Window x:Class="app.dox.XamlWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app.dox"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="true"
+        Title="XamlWindow" Height="349.82" Width="579.437">
+    <Window.Clip>
+        <!-- Важно -->
+        <RectangleGeometry Rect="0,0,579.437,349.82" RadiusX="10" RadiusY="10"/>
+    </Window.Clip>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Fill="#FF22ABC1" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="579"/>
+        <Label x:Name="XaLabel" Content="Label" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" FontFamily="Calibri" Width="521"/>
+        <Rectangle x:Name="XaControl" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="579" MouseLeftButtonDown="WindowMoving">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Button Content="" HorizontalAlignment="Left" Margin="545,4,0,0" VerticalAlignment="Top" Width="24" BorderBrush="{x:Null}" Height="24" RenderTransformOrigin="0.515,0.507" Click="CloseWindow">
+            <Button.Background>
+                <ImageBrush ImageSource="file://mac/Home/Desktop/app.dox/ico/close.png"/>
+            </Button.Background>
+        </Button>
+
+
+        <RichTextBox x:Name="XaDocument" HorizontalAlignment="Left" Height="318" VerticalAlignment="Top" Width="579" FontFamily="Consolas" FontSize="16" VerticalScrollBarVisibility="Visible" Margin="0,33,0,-1">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+
+        </RichTextBox>
+
+    </Grid>
+</Window>

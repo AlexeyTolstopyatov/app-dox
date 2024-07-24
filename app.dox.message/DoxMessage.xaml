@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:app.dox.message"
+        xmlns:Properties="clr-namespace:app.dox.message.Properties" x:Class="app.dox.message.DoxMessageInitializer"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        BorderBrush="Gray"
+        AllowsTransparency="True"
+        Title="DoxMessageInitializer"  Width="430" Height="200">
+    <Window.Clip>
+        <RectangleGeometry RadiusX="10" RadiusY="10" Rect="0,0,430,200"/>
+    </Window.Clip>
+    <Grid Background="#FFEEEEEE">
+        <Rectangle x:Name="ColoredRectangle" Height="30" VerticalAlignment="Top" Fill="#FF72C360" Margin="0,-1,0,0"/>
+        <Label x:Name="TitleLabel" Content="Label" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="16"/>
+        <RibbonButton x:Name="DoneButton" Label="OK" Content="OK" Margin="338,165,16,15" Click="DoneButton_Click" Background="#FFEEEEEE" BorderBrush="#FFB4B4B4" RenderTransformOrigin="0.513,0.44" FocusedBackground="#FFB4B4B4" FocusedBorderBrush="#FFB4B4B4" PressedBackground="#FF6C6C6C" MouseOverBackground="#FFEEEEEE" MouseOverBorderBrush="#FFEEEEEE"/>
+        <Rectangle x:Name="MessageControl" HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="430" MouseLeftButtonDown="MessageMoveEnd">
+            <Rectangle.Fill>
+                <ImageBrush/>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock x:Name="MessageLabel" HorizontalAlignment="Left" Margin="10,35,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="125" Width="410" FontSize="16"/>
+    </Grid>
+</Window>
